@@ -1,0 +1,31 @@
+#!/usr/bin/env ruby
+
+require 'skype_chat'
+require 'thor'
+
+require File.join(
+  File.expand_path(File.dirname(__FILE__)), %w(.. lib skype_chat))
+
+class Sky < Thor
+  desc 'list', 'Show recent chat list.'
+  def list
+    SkypeChat::Cmd.list
+  end
+
+  desc 'read [CHAT_ID]', 'Read chat messages.'
+  def read(chat_id)
+    SkypeChat::Cmd.read_chat(chat_id)
+  end
+
+  desc 'stream [CHAT_ID]', 'Read chat stream.'
+  def stream(chat_id)
+    SkypeChat::Cmd.stream(chat_id)
+  end
+
+  desc 'send [CHAT_ID] [MESSAGE]', 'Send a message'
+  def send(chat_id, message)
+    SkypeChat::Cmd.send(chat_id, message)
+  end
+end
+
+Sky.start

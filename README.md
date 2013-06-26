@@ -14,3 +14,16 @@ Skype chat with command line interface.
 ### Show chat list
 
     $ sky list
+    > CHAT_ID TOPICNAME USERS
+
+### Read chat
+
+    $ sky read CHAT_ID
+
+### Read chat stream
+
+    $ sky stream CHAT_ID
+
+### Send a message
+
+    $ sky send CHAT_ID

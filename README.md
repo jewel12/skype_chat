@@ -1,3 +1,10 @@
 # SkypeChat
 
-TODO: あとで書く
+Skype chat with command line interface.
+
+## Install
+
+  $ git clone https://github.com/jewel12/skype_chat.git
+  $ cd skype_chat
+  $ gem build skype_chat.gemspec
+

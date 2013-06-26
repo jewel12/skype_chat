@@ -23,8 +23,8 @@ class Sky < Thor
   end
 
   desc 'send [CHAT_ID] [MESSAGE]', 'Send a message'
-  def send(chat_id, message)
-    SkypeChat::Cmd.send(chat_id, message)
+  def send(chat_id, *message)
+    SkypeChat::Cmd.send(chat_id, message.join(' '))
   end
 end
 

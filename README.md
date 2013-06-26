@@ -7,6 +7,7 @@ Skype chat with command line interface.
     $ git clone https://github.com/jewel12/skype_chat.git
     $ cd skype_chat
     $ gem build skype_chat.gemspec
+    $ gem install skype_chat-(VERSION).gem
 
 ## Usage
 

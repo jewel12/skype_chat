@@ -33,6 +33,8 @@ module SkypeChat
         chat = Chat.new(chat_id)
         messages = message_ids.map { |id| Message.new(id, chat) }
 
+        messages.each { |m| self.mark_as_read(m.id) }
+
         return messages
       end
 
@@ -56,6 +58,10 @@ module SkypeChat
 
       def send_message(chat_id, text)
         Skype.chatmessage(chat_id, text)
+      end
+
+      def mark_as_read(message_id)
+        Skype.set(:message, message_id, :seen)
       end
     end
   end

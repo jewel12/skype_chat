@@ -14,7 +14,7 @@ class Sky < Thor
 
   desc 'list_no_color', 'Show recent chat list without colored string.'
   def list_no_color
-    Skypechat::Cmd.list(false)
+    SkypeChat::Cmd.list(false)
   end
 
   desc 'read [CHAT_ID]', 'Read chat messages.'

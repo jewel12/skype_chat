@@ -29,7 +29,8 @@ module SkypeChat
         messages.each { |m| self.show_message_line(m) }
       end
 
-      def show_chat_list(short_chat_id_pairs)
+      def show_chat_list(short_chat_id_pairs, color=true)
+        Term::ANSIColor.coloring = false unless color        
         short_chat_id_pairs.each do |short_id, chat|
           line = [short_id.green.bold]
           line << chat.topic.blue if chat.topic

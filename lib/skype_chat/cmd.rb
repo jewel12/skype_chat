@@ -2,8 +2,8 @@ module SkypeChat
 
   class Cmd
     class << self
-      def list
-        Render.show_chat_list(ChatShortIDPairsMaker.make_pairs)
+      def list(color=true)
+        Render.show_chat_list(ChatShortIDPairsMaker.make_pairs, color)
       end
 
       def read_chat(chat_id)
